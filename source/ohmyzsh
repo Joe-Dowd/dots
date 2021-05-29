@@ -1,3 +1,5 @@
+# ATT: https://github.com/ohmyzsh/ohmyzsh
+
 export ZSH="/home/joe/.oh-my-zsh"
 export ZSH_THEME="robbyrussell"
 export HYPHEN_INSENSITIVE="true"
