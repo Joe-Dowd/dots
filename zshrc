@@ -7,6 +7,6 @@ export PATH="${PATH}:${BIN_PATH}"
 
 # sources
 SOURCE_PATH="${DOT_DIR}/source"
-for file in ${SOURCE_PATH}/*.sh; do
+for file in ${SOURCE_PATH}/*; do
     . "$file"
 done
