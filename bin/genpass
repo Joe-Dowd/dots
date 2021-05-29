@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# https://gitlab.com/Harmelodic/dots/-/blob/master/utils/genpass
+# ATT: https://gitlab.com/Harmelodic/dots/-/blob/master/utils/genpass
 
 # Generate a password (default 32 characters)
 

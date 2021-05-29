@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Make a directory then immediately jump into it
+# ATT: https://github.com/Joe-Dowd/dots-old/blob/master/.zsh/functions
 
 mkcd () {
     if [ ! -n "$1" ]; then 
@@ -8,7 +8,6 @@ mkcd () {
     elif [ -d $1 ]; then
         echo "Directory already exists."
     else
-        mkdir $1
-        cd $1 
+        mkdir $1 && cd $1 
     fi
 }

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# find and replace
+# recursive find and replace
 
 BIN_NAME="$(basename ${0})"
 USAGE="USAGE: ${BIN_NAME} [find] [replace] ?apply"

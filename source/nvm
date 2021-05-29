@@ -1,4 +1,7 @@
 # nvm init
+
+# ATT: https://github.com/nvm-sh/nvm
+
 source /usr/share/nvm/init-nvm.sh
 
 # place this after nvm initialization!
