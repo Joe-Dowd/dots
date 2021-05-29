@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# https://gitlab.com/Harmelodic/dots/-/blob/master/utils/wimc
+
+# Outputs config for common development tools
+# Stands for: What Is My Config?
+
+echo "External IP"
+echo "------------------------------------"
+dig +short myip.opendns.com @resolver1.opendns.com
+echo ""
+echo ""
+
+echo ""
+echo "git"
+echo "------------------------------------"
+git config --list | grep -v alias
+echo ""
+echo ""
+
+
+echo ""
+echo "gcloud"
+echo "------------------------------------"
+gcloud config list
+echo ""
+echo ""
+
+
+
+echo ""
+echo "aws"
+echo "------------------------------------"
+aws configure list
+echo ""
+echo ""
+
+
+
+echo ""
+echo "kubectl"
+echo "------------------------------------"
+kubectl config current-context
+echo ""
+echo ""
