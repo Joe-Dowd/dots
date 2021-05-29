@@ -14,12 +14,15 @@ echo '. ~/dots/zshrc' >> ~/.zshrc
 ### ./bin
 file name = a command for your shell
 ```
+bak = backup a file
 extract = extract most archives
+far = find and replace
+genpass = generate a password (@matt)
 pbcopy = stdin -> clipboard
 pbpaste = clipboard -> stdout
 srm = safe rm (recycle bin)
-far = find and replace
-```
+wimc = what is my config (@matt)
+``` 
 
 ### ./source
 file names are self explanatory

@@ -33,5 +33,4 @@ if [ "${3}" = "apply" ]; then
 else
     echo 'To apply these changes: '
     echo "${BIN_NAME} '${1}' '${2}' apply"
-
 fi
