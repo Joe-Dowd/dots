@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# find and replace
+
+BIN_NAME="$(basename ${0})"
+USAGE="USAGE: ${BIN_NAME} [find] [replace] ?apply"
+
+if [ "${1}" = "" ]; then
+    echo "${USAGE}"
+    exit 1
+fi
+
+if [ "${2}" = "" ]; then
+    echo "${USAGE}"
+    exit 1
+fi
+
+echo "Looking for instances of ${1} in $(pwd)" | grep --color "${1}"
+echo ''
+echo "Instances of ${1} to be replaced: " | grep --color "${1}"
+echo ''
+grep -rne "${1}" . | grep -v '.md:' | grep --color "${1}"
+echo ''
+echo "Skipping these instances:"
+grep -rne "${1}" . | grep ".md:" | grep --color "${1}"
+echo ''
+
+if [ "${3}" = "apply" ]; then
+    grep -Ril "${1}" . | grep -ve ".md$" | xargs -I '{}' sed -i '' -e "s/${1}/${2}/g" "{}"
+    echo ''
+    echo 'Result: '
+    grep --color -rne "${2}\|${1}" .
+else
+    echo 'To apply these changes: '
+    echo "${BIN_NAME} '${1}' '${2}' apply"
+
+fi
