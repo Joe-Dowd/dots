@@ -7,7 +7,7 @@ RECOVER_LOC="/tmp/recover_buffer"
 RND_UUID="$(uuidgen)"
 DATETIME="$(date --iso-8601=seconds)"
 
-if [[ -f $1 ]]; then
+if [[ -e $1 ]]; then
     mkdir -p "${RECOVER_LOC}"
     echo "${DATETIME} ${RND_UUID} $(pwd)/$1" >> ${RECOVER_LOC}/log
     tar -czvf ${RECOVER_LOC}/${RND_UUID}.tar.gz $1
