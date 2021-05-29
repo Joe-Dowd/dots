@@ -4,7 +4,7 @@ requires oh my zsh
 ## how to install
 clone to ~/dots
 ```
-mv ~/.zshrc{,/bak}
+mv ~/.zshrc{,.bak}
 echo '. ~/dots/zshrc' >> ~/.zshrc
 
 ```
