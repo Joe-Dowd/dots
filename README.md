@@ -56,12 +56,18 @@ cd -
 | `pbpaste` | clipboard -> stdout |
 | `prepend` | Takes stdin and prepends a string followed by a space to every line |
 | `reboot` | Reboot now |
+| `rgrep` | Recursive grep |
 | `srm` | Safe `rm` (recycle bin) |
 | `todo` | Recursively searh a directory for TODO comments |
 | `vi` | `vim` |
 | `wimc` | What is my config? (@matt) |
 
 
+### **3. How can I contribute?**
+```
+cd ~/.dots
+todo
+```
 
 ---
 
