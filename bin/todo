@@ -1,2 +1,2 @@
 #!/bin/bash
-grep --color=auto -rne 'TODO.*: ' ./*
+grep --color=auto -rne 'TODO.*: ' ./*   # todo shouldnt see this
