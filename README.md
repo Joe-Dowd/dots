@@ -3,13 +3,12 @@
 [My](https://github.com/Joe-Dowd) shell config.
 
 **Requires:** 
-- `zsh`
-- [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
+ - [zsh](https://sourceforge.net/projects/zsh)
+ - [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 **Expects:**
  - `Linux`
  - `Manjaro` *(shouldn't matter)*
- - `KDE` *(shouldn't matter)*
 
 **Took stuff from:** *(referenced via comment where relevant)*
 - [Harmelodic](https://gitlab.com/Harmelodic/dots) - [licence](https://gitlab.com/Harmelodic/dots/-/commit/608c3efde3e750a6a4818bfd6732cc55ba128cf3)
@@ -39,7 +38,7 @@ cd -
 
 ### **3. What are the commands?**
 ```
-bak = backup a file (rename file to file.bak)
+bak = backup a file (copy 'file' to 'file.bak')
 c = `clear`
 extract = extract most archives
 far = find and replace
@@ -49,8 +48,10 @@ mkcd = new directory and go there
 nvm = [TODO add reference]
 pbcopy = stdin -> clipboard
 pbpaste = clipboard -> stdout
+prepend = take stdin and prepend a string followed by a space
 reboot = reboot now
 srm = safe rm (recycle bin)
+todo = recursively searh a directory for the string 'TODO ' 
 vi = `vim`
 wimc = what is my config (@matt)
 
@@ -72,8 +73,3 @@ File name = Sategory of shell modifications
  - Could be an alias
  - Could be a visual setting
  - Could be a behavoiur modification
-
----
-
-## TODO
- - Migrate stuff from desktop
