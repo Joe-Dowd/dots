@@ -5,6 +5,9 @@
 # Outputs config for common development tools
 # Stands for: What is my config?
 
+# As commands rely on network - run individual processes concurrently
+# TODO : List commands and itterate to generate checks, taking title from $0
+
 {
     which dig &> /dev/null && {
         echo "External IP"
