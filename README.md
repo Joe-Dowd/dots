@@ -51,11 +51,9 @@ pbpaste = clipboard -> stdout
 prepend = take stdin and prepend a string followed by a space
 reboot = reboot now
 srm = safe rm (recycle bin)
-todo = recursively searh a directory for the string 'TODO ' 
+todo = recursively searh a directory for TODO comments
 vi = `vim`
 wimc = what is my config (@matt)
-
-# TODO : add ./source commands
 ``` 
 
 ---
