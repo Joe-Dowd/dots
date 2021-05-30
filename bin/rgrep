@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# recursive grep
+
+grep --color=auto -rne ${1} ./*
