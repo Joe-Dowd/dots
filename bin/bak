@@ -1,1 +1,5 @@
+#!/bin/bash
+
+# TODO : timestamp for backup in file name (see 'bin/srm')
+
 cp -rf ${1}{,.bak}

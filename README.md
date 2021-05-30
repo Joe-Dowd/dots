@@ -28,12 +28,17 @@ mv ~/.zshrc{,.bak}
 echo '. ~/.dots/zshrc' >> ~/.zshrc
 ```
 
+Or just add `. ~/.dots/zshrc` to `~/.zshrc` to pull in the features.
+
 ### **2. How to update?**
-git pull!
+ - git pull
+ - re-source for new binarys
+
 ```
 cd ~/.dots
 git pull origin master
 cd -
+. ~/.zshrc
 ```
 
 ### **3. What are the commands?**
@@ -49,7 +54,7 @@ cd -
 | `nvm` | [nvm](https://github.com/nvm-sh/nvm) |
 | `pbcopy` | stdin -> clipboard |
 | `pbpaste` | clipboard -> stdout |
-| `prepend` | Take stdin and prepend a string followed by a space |
+| `prepend` | Takes stdin and prepends a string followed by a space to every line |
 | `reboot` | Reboot now |
 | `srm` | Safe `rm` (recycle bin) |
 | `todo` | Recursively searh a directory for TODO comments |
@@ -66,10 +71,10 @@ cd -
 File name = A command you can execute
 
  - See file comment for usage
-   - If there's no comment sorry
+   - If there's no comment sorry, see FAQ#3
 
 #### **`./source`**
-File name = Sategory of shell modifications
+File name = Category of shell modifications
  - Could be an alias
  - Could be a visual setting
- - Could be a behavoiur modification
+ - Could be a behaviour modification
