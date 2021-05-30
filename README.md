@@ -37,24 +37,26 @@ cd -
 ```
 
 ### **3. What are the commands?**
-```
-bak = backup a file (copy 'file' to 'file.bak')
-c = `clear`
-extract = extract most archives
-far = find and replace
-genpass = generate a password (@matt)
-home = `clear` and `cd ~`
-mkcd = new directory and go there
-nvm = [TODO add reference]
-pbcopy = stdin -> clipboard
-pbpaste = clipboard -> stdout
-prepend = take stdin and prepend a string followed by a space
-reboot = reboot now
-srm = safe rm (recycle bin)
-todo = recursively searh a directory for TODO comments
-vi = `vim`
-wimc = what is my config (@matt)
-``` 
+| Command | Description |
+| --- | ----------- |
+| `bak` | Backup a file (copy 'file' to 'file.bak') |
+| `c` | `clear` |
+| `extract` | Extract most archives |
+| `far` | Find and replace |
+| `genpass` | Generate a password (@matt) |
+| `home` | `clear` and `cd ~` |
+| `mkcd` | New directory and go there |
+| `nvm` | [nvm](https://github.com/nvm-sh/nvm) |
+| `pbcopy` | stdin -> clipboard |
+| `pbpaste` | clipboard -> stdout |
+| `prepend` | Take stdin and prepend a string followed by a space |
+| `reboot` | Reboot now |
+| `srm` | Safe `rm` (recycle bin) |
+| `todo` | Recursively searh a directory for TODO comments |
+| `vi` | `vim` |
+| `wimc` | What is my config? (@matt) |
+
+
 
 ---
 
