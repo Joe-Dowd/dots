@@ -11,10 +11,7 @@
  - `Manjaro` *(shouldn't matter)*
 
 **Took stuff from:** *(referenced via comment where relevant)*
-- [Harmelodic](https://gitlab.com/Harmelodic/dots) - [licence](https://gitlab.com/Harmelodic/dots/-/commit/608c3efde3e750a6a4818bfd6732cc55ba128cf3)
-- [me](https://github.com/Joe-Dowd/dots-old)
-- [nvm](https://github.com/nvm-sh/nvm) - [licence](https://github.com/nvm-sh/nvm/blob/master/LICENSE.md) - [latest commit](https://github.com/nvm-sh/nvm/commit/07b20d5008a480f7e579fd34e6d39919909206f4)
-- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) - [licence](https://github.com/ohmyzsh/ohmyzsh/blob/master/LICENSE.txt) - [latest commit](https://github.com/ohmyzsh/ohmyzsh/commit/cd4918c2cdb6613cf77ea8f6f29e1930bd7f4bf5)
+- [Harmelodic](https://gitlab.com/Harmelodic/dots)
 
 ---
 
@@ -48,7 +45,7 @@ cd -
 | `c` | `clear` |
 | `extract` | Extract most archives |
 | `far` | Find and replace |
-| `genpass` | Generate a password (@matt) |
+| `genpass` | Generate a password  [@Harmelodic](https://gitlab.com/Harmelodic/dots)|
 | `home` | `clear` and `cd ~` |
 | `mkcd` | New directory and go there |
 | `nvm` | [nvm](https://github.com/nvm-sh/nvm) |
@@ -60,7 +57,7 @@ cd -
 | `srm` | Safe `rm` (recycle bin) |
 | `todo` | Recursively searh a directory for TODO comments |
 | `vi` | `vim` |
-| `wimc` | What is my config? (@matt) |
+| `wimc` | What is my config? [@Harmelodic](https://gitlab.com/Harmelodic/dots)|
 
 
 ### **3. How can I contribute?**
