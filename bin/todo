@@ -1,2 +1,2 @@
 #!/bin/bash
-grep --color -rne 'TODO: ' .
+grep --color=auto -rne 'TODO: ' ./*
