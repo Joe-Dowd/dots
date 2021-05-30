@@ -1,45 +1,59 @@
 #!/bin/bash
 
-# ATT: https://gitlab.com/Harmelodic/dots/-/blob/master/utils/wimc
+# ATT: https://gitlab.com/Harmelodic/dots/-/blob/master/utils/wimc @2021-29-05
 
 # Outputs config for common development tools
-# Stands for: What Is My Config?
+# Stands for: What is my config?
 
-echo "External IP"
-echo "------------------------------------"
-dig +short myip.opendns.com @resolver1.opendns.com
-echo ""
-echo ""
+{
+    which dig &> /dev/null && {
+        echo "External IP"
+        echo "------------------------------------"
+        dig +short myip.opendns.com @resolver1.opendns.com
+    } |& prepend 0 &
 
-echo ""
-echo "git"
-echo "------------------------------------"
-git config --list | grep -v alias
-echo ""
-echo ""
+    which git &> /dev/null && {
+        echo ""
+        echo ""
+        echo "git"
+        echo "------------------------------------"
+        git config --list | grep -v alias
+    } |& prepend 1 &
 
+    which gcloud &> /dev/null && {
+        echo ""
+        echo ""
+        echo "gcloud"
+        echo "------------------------------------"
+        gcloud config list
+    } |& prepend 2 &
 
-echo ""
-echo "gcloud"
-echo "------------------------------------"
-gcloud config list
-echo ""
-echo ""
+    which aws &> /dev/null && {
+        echo ""
+        echo ""
+        echo "aws"
+        echo "------------------------------------"
+        aws configure list
+    } |& prepend 3 &
 
+    which kubectl &> /dev/null && {
+        echo ""
+        echo ""
+        echo "kubectl"
+        echo "------------------------------------"
+        kubectl config current-context
+    } |& prepend 4 &
 
+    which doctl &> /dev/null && {
+        echo ""
+        echo ""
+        echo "doctl"
+        echo "------------------------------------"
+        doctl account get
+        echo ""
+    } |& prepend 5 &
 
-echo ""
-echo "aws"
-echo "------------------------------------"
-aws configure list
-echo ""
-echo ""
-
-
-
-echo ""
-echo "kubectl"
-echo "------------------------------------"
-kubectl config current-context
-echo ""
-echo ""
+    for job in `jobs -p`; do
+        wait $job
+    done
+} 2>/dev/null | sort -k1.1,1.1 -s | sed 's/^..//'
