@@ -7,7 +7,7 @@
 
 # As commands rely on network - run individual processes concurrently
 # TODO : List commands and iterate to generate checks, taking title from $0
-
+# date --iso-8601=ns       # for debug timeframes
 {
     which dig &> /dev/null && {
         echo "External IP"
@@ -53,10 +53,10 @@
         echo "doctl"
         echo "------------------------------------"
         doctl account get
-        echo ""
     } |& prepend 5 &
 
     for job in `jobs -p`; do
         wait $job
     done
 } 2>/dev/null | sort -k1.1,1.1 -s | sed 's/^..//'
+# date --iso-8601=ns    # for debug timeframes
