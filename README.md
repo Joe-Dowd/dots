@@ -60,7 +60,7 @@ cd -
 | `wimc` | What is my config? [@Harmelodic](https://gitlab.com/Harmelodic/dots)|
 
 
-### **3. How can I contribute?**
+### **4. How can I contribute?**
 ```
 cd ~/.dots
 todo
