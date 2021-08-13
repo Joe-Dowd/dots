@@ -1,0 +1,5 @@
+#!/bin/bash
+
+tts () {
+    pbpaste | festival --tts
+}

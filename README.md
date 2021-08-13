@@ -55,7 +55,7 @@ cd -
 | `reboot` | Reboot now |
 | `rgrep` | Recursive grep |
 | `srm` | Safe `rm` (recycle bin) |
-| `todo` | Recursively searh a directory for TODO comments |
+| `todo` | Recursively search a directory for TODO comments |
 | `vi` | `vim` |
 | `wimc` | What is my config? [@Harmelodic](https://gitlab.com/Harmelodic/dots)|
 
@@ -81,3 +81,6 @@ File name = Category of shell modifications
  - Could be an alias
  - Could be a visual setting
  - Could be a behaviour modification
+
+#### **`./config`**
+Config files for other applications
