@@ -1,2 +1,17 @@
 #!/bin/bash
-xclip -o | festival --tts
+
+mkdir -p ~/tmp
+if [ ! -f ~/tmp/speakhighlight.pid ]; then
+    xclip -o | festival --tts & JPID=$!
+    echo $JPID > ~/tmp/speakhighlight.pid
+    wait $JPID
+    rm ~/tmp/speakhighlight.pid
+else
+    echo "kill -9 $(cat ~/tmp/speakhighlight.pid)"
+    kill -9 $(cat ~/tmp/speakhighlight.pid)
+    killall -v audsp        # festival creates these
+                            #   processes, kill all is 
+                            #   probably not the best way
+                            #   to deal with them though.
+    rm ~/tmp/speakhighlight.pid
+fi
