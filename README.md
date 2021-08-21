@@ -59,6 +59,7 @@ git pull origin master
 | `speakhighlight` | Text to speech for text highlighted in Xorg |
 | `srm` | Safe `rm` (recycle bin) |
 | `todo` | Recursively search a directory for TODO comments |
+| `tts` | Speak contents of clipboard |
 | `vi` | `vim` |
 | `wimc` | What is my config? [@Harmelodic](https://gitlab.com/Harmelodic/dots)|
 
