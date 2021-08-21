@@ -1,3 +1,10 @@
 export EDITOR='vim'
+
+# use vi input mode in shell
 set -o vi
+
+# vi is vim
 alias vi='vim -u ~/.dots/config/vimrc.clean'
+
+# import custom vim config
+alias vim='vim -u ~/.dots/config/vimrc'
