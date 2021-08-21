@@ -10,6 +10,9 @@
  - `Linux`
  - `Manjaro` *(shouldn't matter)*
 
+**Recommended:**
+ - `festival` *(for text to speech)*
+
 **Took stuff from:** *(referenced via comment where relevant)*
 - [Harmelodic](https://gitlab.com/Harmelodic/dots)
 
@@ -34,7 +37,6 @@ Or just add `. ~/.dots/zshrc` to `~/.zshrc` to pull in the features.
 ```
 cd ~/.dots
 git pull origin master
-cd -
 . ~/.zshrc
 ```
 
@@ -54,6 +56,7 @@ cd -
 | `prepend` | Takes stdin and prepends a string followed by a space to every line |
 | `reboot` | Reboot now |
 | `rgrep` | Recursive grep |
+| `speakhighlight` | Text to speech for text highlighted in Xorg |
 | `srm` | Safe `rm` (recycle bin) |
 | `todo` | Recursively search a directory for TODO comments |
 | `vi` | `vim` |
