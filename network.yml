@@ -1,0 +1,11 @@
+---
+- hosts: localhost 
+  become: yes
+  tasks:
+  - name: "set connectivity test uri"
+    template:
+      src: templates/network/20-connectivity.conf.j2
+      dest: /etc/NetworkManager/conf.d/20-connectivity.conf
+      owner: root
+      group: root
+      mode: 0644

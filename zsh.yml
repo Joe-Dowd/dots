@@ -1,0 +1,38 @@
+---
+- hosts: localhost 
+  become: yes
+  become_user: joe # TODO : should be a var
+  tasks:
+  - name: create zsh directory
+    file:
+      path: ~/.zsh
+      state: directory
+  - name: create zsh bin directory
+    file:
+      path: ~/.zsh/bin
+      state: directory
+  - name: create zsh source directory
+    file:
+      path: ~/.zsh/source
+      state: directory
+
+  - name: populate zsh bin directory
+    template:
+      src: "{{ item }}"
+      dest: ~/.zsh/bin/{{ item | basename }}
+      mode: 0750
+    with_fileglob:
+      - templates/zsh/bin/*
+
+  - name: populate zsh source directory
+    template:
+      src: "{{ item }}"
+      dest: ~/.zsh/source/{{ item | basename }}
+    with_fileglob:
+      - templates/zsh/source/*
+
+  - name: write zshrc
+    template:
+      src: templates/zsh/zshrc
+      dest: ~/.zshrc
+      mode: 0640

@@ -1,0 +1,7 @@
+---
+
+# config files
+- import_playbook: vim.yml
+
+# zsh goes last as it depends on config files
+- import_playbook: zsh.yml

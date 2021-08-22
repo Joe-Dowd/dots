@@ -1,4 +1,4 @@
-DOT_DIR="${HOME}/.dots"
+DOT_DIR="${HOME}/.zsh"
 
 # bins
 BIN_PATH="${DOT_DIR}/bin"
