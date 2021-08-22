@@ -68,9 +68,9 @@ Execute `todo` in the project folder.
 ## **Project structure**
 
 ```
-/
+dots/
 ├── templates/
-│   ├─── vim/
+│   ├── vim/
 │   └── zsh/
 │       ├── bin/     # File name = A command you can execute
 │       └── source/  # File name = Category of shell modifications
