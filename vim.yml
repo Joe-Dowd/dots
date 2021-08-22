@@ -1,0 +1,15 @@
+---
+- hosts: localhost 
+  become: yes
+  become_user: joe # TODO : should be a var
+  tasks:
+
+  - name: "write vimrc file"
+    template:
+      src: ./templates/vim/vimrc.j2
+      dest: ~/.vimrc
+
+  - name: "write vimrc.clean file"
+    template:
+      src: ./templates/vim/vimrc.clean.j2
+      dest: ~/.vimrc.clean

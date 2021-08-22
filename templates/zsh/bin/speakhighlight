@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TODO : install festival in ansible
+# TODO : move tmp folder to ansible vars
+
 mkdir -p ~/tmp
 if [ ! -f ~/tmp/speakhighlight.pid ]; then
     xclip -o | festival --tts & JPID=$!

@@ -1,10 +1,11 @@
 # **dots**
 
-[My](https://github.com/Joe-Dowd) shell config.
+[My](https://github.com/Joe-Dowd) system config.
 
 **Requires:** 
  - [zsh](https://sourceforge.net/projects/zsh)
  - [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
+ - [ansible](https://www.ansible.com/)
 
 **Expects:**
  - `Linux`
@@ -20,25 +21,19 @@
 
 ## Dissapointingly infrequently asked questions
 ### **1. How to use?**
-First, clone this repository to `~/.dots`
+ - Clone this repository
+ - Execute the ansible playbook
 
-Then:
 ```
-mv ~/.zshrc{,.bak}
-echo '. ~/.dots/zshrc' >> ~/.zshrc
+sudo ansible-playbook system.yml   # for all settings
+# or
+ansible-playbook user.yml          # for only user settings
 ```
-
-Or just add `. ~/.dots/zshrc` to `~/.zshrc` to pull in the features.
 
 ### **2. How to update?**
  - git pull
- - re-source for new binarys
-
-```
-cd ~/.dots
-git pull origin master
-. ~/.zshrc
-```
+ - do an ansible run
+ - restart zsh
 
 ### **3. What are the commands?**
 | Command | Description |
@@ -47,7 +42,7 @@ git pull origin master
 | `c` | `clear` |
 | `extract` | Extract most archives |
 | `far` | Find and replace |
-| `genpass` | Generate a password  [@Harmelodic](https://gitlab.com/Harmelodic/dots)|
+| `genpass` | Generate a password |
 | `home` | `clear` and `cd ~` |
 | `mkcd` | New directory and go there |
 | `nvm` | [nvm](https://github.com/nvm-sh/nvm) |
@@ -61,30 +56,25 @@ git pull origin master
 | `todo` | Recursively search a directory for TODO comments |
 | `tts` | Speak contents of clipboard |
 | `vi` | `vim` |
-| `wimc` | What is my config? [@Harmelodic](https://gitlab.com/Harmelodic/dots)|
+| `wimc` | What is my config? |
 
 
 ### **4. How can I contribute?**
-```
-cd ~/.dots
-todo
-```
+
+Execute `todo` in the project folder.
 
 ---
 
-## **Folders?**
+## **Project structure**
 
-#### **`./bin`**
-File name = A command you can execute
-
- - See file comment for usage
-   - If there's no comment sorry, see FAQ#3
-
-#### **`./source`**
-File name = Category of shell modifications
- - Could be an alias
- - Could be a visual setting
- - Could be a behaviour modification
-
-#### **`./config`**
-Config files for other applications
+```
+/
+├── templates/
+│   ├─── vim/
+│   └── zsh/
+│       ├── bin/     # File name = A command you can execute
+│       └── source/  # File name = Category of shell modifications
+├── *.yml            # Playbook files
+├── system.yml       # Runs all playbooks (needs root)
+└── user.yml         # Configures user
+```

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # ATT: https://github.com/Joe-Dowd/dots-old/blob/master/.zsh/functions
 
 mkcd () {

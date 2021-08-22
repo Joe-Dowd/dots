@@ -1,4 +1,4 @@
-#!/bin/bash
+# TODO : install festival in ansible
 
 tts () {
     pbpaste | festival --tts

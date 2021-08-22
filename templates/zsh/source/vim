@@ -4,7 +4,7 @@ export EDITOR='vim'
 set -o vi
 
 # vi is vim
-alias vi='vim -u ~/.dots/config/vimrc.clean'
+alias vi='vim -u ~/.vimrc.clean'
 
 # import custom vim config
-alias vim='vim -u ~/.dots/config/vimrc'
+alias vim='vim -u ~/.vimrc'
