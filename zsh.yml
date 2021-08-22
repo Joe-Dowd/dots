@@ -7,14 +7,17 @@
     file:
       path: ~/.zsh
       state: directory
+      mode: 0750
   - name: create zsh bin directory
     file:
       path: ~/.zsh/bin
       state: directory
+      mode: 0750
   - name: create zsh source directory
     file:
       path: ~/.zsh/source
       state: directory
+      mode: 0750
 
   - name: populate zsh bin directory
     template:

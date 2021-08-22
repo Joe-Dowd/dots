@@ -1,0 +1,12 @@
+---
+- hosts: localhost 
+  become: yes
+  tasks:
+  - name: Install packages
+    pacman:
+      name:
+      - vim
+      - zsh
+      - festival
+      - tmux
+      state: present
