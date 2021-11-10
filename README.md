@@ -9,7 +9,7 @@
 
 **Expects:**
  - `Linux`
- - `Manjaro` *(shouldn't matter)*
+ - `Arch` *(uses pacman)*
 
 **Recommended:**
  - `festival` *(for text to speech)*

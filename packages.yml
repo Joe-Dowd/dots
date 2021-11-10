@@ -2,11 +2,15 @@
 - hosts: localhost 
   become: yes
   tasks:
-  - name: Install packages
+  - name: Install base packages
     pacman:
       name:
       - vim
       - zsh
       - festival
       - tmux
+      - jq
+      - terraform
+      - jdk-openjdk
+      - maven
       state: present
