@@ -1,3 +1,9 @@
 tts () {
-    pbpaste | festival --tts
+    pbpaste | sed -e 's/\\/ back slash /g' \
+                  -e 's/\// forward slash/g' \
+                  -e 's/\-/ dash /g' \
+                  -e 's/:/ colon /g' \
+                  -e 's/;/ semi colon /g' \
+                  -e 's/?/ question mark /g' \
+                  -e 's/[^a-zA-Z0-9 \.\,\n]//g' | festival --tts
 }
