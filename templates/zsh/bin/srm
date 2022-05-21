@@ -5,7 +5,7 @@ set -e
 
 RECOVER_LOC="~/tmp/recover"
 RND_UUID="$(uuidgen)"
-DATETIME="$(date --iso-8601=seconds)"
+DATETIME="$(date -u --iso-8601=seconds)"
 
 if [[ -e ${1} ]]; then
     mkdir -p "${RECOVER_LOC}"

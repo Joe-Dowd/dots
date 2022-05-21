@@ -1,5 +1,3 @@
 #!/bin/bash
-
-# TODO : timestamp for backup in file name (see 'bin/srm')
-
-cp -rf ${1}{,.bak}
+DATETIME="$(date -u --iso-8601=seconds)"
+cp -rf ${1}{,.${DATETIME}.bak}

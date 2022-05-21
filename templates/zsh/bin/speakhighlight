@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# TODO : install festival in ansible
 # TODO : move tmp folder to ansible vars
 
 mkdir -p ~/tmp

@@ -1,2 +1,8 @@
 #!/bin/bash
-grep --color=auto -rne 'TODO.*:' ./*   # todo shouldnt see this
+# EOL `# c8ec2a90-540e-4ffa-83df-214e1960b35d` comments
+#   are to ensure todo results don't include this script file
+#   unless on a line that does not expect to be matched.
+
+grep --color=always -rne 'TODO.*:' `# c8ec2a90-540e-4ffa-83df-214e1960b35d` \
+| grep -v 'c8ec2a90-540e-4ffa-83df-214e1960b35d' \
+| grep -e 'TODO.*:' # c8ec2a90-540e-4ffa-83df-214e1960b35d
