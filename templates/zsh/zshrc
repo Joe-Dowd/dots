@@ -1,20 +1,21 @@
 DOT_DIR="${HOME}/.zsh"
 
 # bins
-BIN_PATH="${DOT_DIR}/bin"
-#chmod +x ${BIN_PATH}/* # perms set by ansible
-
-# Scripts
-for file in ${SCRIPT_PATH}; do
-    # TODO : only execute .sh$ files
-    ./${file}
-done
-
 # TODO : Don't re-export PATH if already contained
+BIN_PATH="${DOT_DIR}/bin"
 export PATH="${PATH}:${BIN_PATH}"
 
 # sources
 SOURCE_PATH="${DOT_DIR}/source"
 for file in ${SOURCE_PATH}/*; do
-    . "${file}"
+    source "${file}"
+done
+
+# Scripts
+# : ensure executes last, as depends on bin (and maybe source)
+SCRIPT_PATH="${DOT_DIR}/scripts"
+for file in ${SCRIPT_PATH}/*; do
+    #echo ${file}
+    # TODO : only execute .sh$ files
+    ${file}
 done

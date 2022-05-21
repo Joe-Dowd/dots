@@ -1,0 +1,14 @@
+# Ensure main is the default branch, not master
+setopt prompt_subst
+autoload -U add-zsh-hook
+add-zsh-hook precmd ps1_master_warning
+
+X_PRE_PROMPT="${PROMPT}"
+
+function ps1_master_warning {
+  pre_warning=""
+  if [[ $(git branch --show-current 2> /dev/null) = "master" ]]; then
+    pre_warning="${fg_bold[yellow]}s/master/main/g "
+  fi
+  export PROMPT="${pre_warning}${X_PRE_PROMPT}"
+}
