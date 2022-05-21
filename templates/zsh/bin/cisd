@@ -1,0 +1,34 @@
+#!/bin/bash
+# ATT: https://github.com/Harmelodic/dots/blob/main/bin/fed @ 80a5dd3f99ede5500e973fc2ffad8d4e2c0fafc3
+
+# "cisd" - "Command in sub directory" for running scripts in subdirectory of your current location
+
+# func
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+#script
+
+provided_script=$*
+
+if [ -z "$provided_script" ]; then
+    echo "Please provide a script to run in each directory, for example:"
+    echo "$ fed git status"
+    echo "or"
+    echo "$ fed \"git fetch && git pull\""
+    exit 1
+else
+    shopt -s dotglob
+    for directory_with_slash in */; do
+        directory=$(echo "${directory_with_slash}" | cut -d'/' -f 1)
+        echo "====================================================="
+        echo "Running in ${bold}${directory}${normal}"
+
+        cd -- "${directory}" || exit 1
+
+        eval "${provided_script}"
+
+        cd ..
+    done
+    shopt -u dotglob
+fi
