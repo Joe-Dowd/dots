@@ -2,4 +2,4 @@ alias git-amend='git add . ; git commit --amend --no-edit ; git push --force-wit
 
 # which gpa as it's a three letter command that could be legit at some point
 # (so don't use in scripts, not that you should for git push commands...)
-which gpa || alias gpa='git add . ; git commit --amend --no-edit ; git push --force-with-lease'
+which gpa &> /dev/null || alias gpa='git add . ; git commit --amend --no-edit ; git push --force-with-lease'
