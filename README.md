@@ -9,13 +9,13 @@
 
 **Expects:**
  - `Linux`
- - `Arch` *(shouldn't matter)*
+ - `Arch` *(only matters for system (not user) playbook)*
 
 **Recommended:**
  - `festival` *(for text to speech)*
 
 **Took stuff from:** *(referenced via comment where relevant)*
-- [Harmelodic](https://gitlab.com/Harmelodic/dots)
+- Harmelodic [gitlab](https://gitlab.com/Harmelodic/dots)/[github](https://github.com/Harmelodic/dots)
 
 ---
 
@@ -38,8 +38,9 @@ ansible-playbook user.yml          # for only user settings
 ### **3. What are the commands?**
 | Command | Description |
 | --- | ----------- |
-| `bak` | Backup a file (copy 'file' to 'file.bak') |
+| `bak` | Backup a file (copy 'file' to 'file.datetime.bak') |
 | `c` | `clear` |
+| `cisd` | "Command in sub directory" - for running scripts in subdirectory of your current location - `$ cisd ls -lah` |
 | `extract` | Extract most archives |
 | `far` | Find and replace |
 | `genpass` | Generate a password |
