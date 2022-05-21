@@ -9,7 +9,7 @@
 
 **Expects:**
  - `Linux`
- - `Manjaro` *(shouldn't matter)*
+ - `Arch` *(shouldn't matter)*
 
 **Recommended:**
  - `festival` *(for text to speech)*
@@ -73,6 +73,7 @@ dots/
 │   ├── vim/
 │   └── zsh/
 │       ├── bin/     # File name = A command you can execute
+│       ├── scripts/ # File name = A script executed on a new sesison
 │       └── source/  # File name = Category of shell modifications
 ├── *.yml            # Playbook files
 ├── system.yml       # Runs all playbooks (needs root)

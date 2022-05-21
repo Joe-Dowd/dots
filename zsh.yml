@@ -18,6 +18,11 @@
       path: ~/.zsh/source
       state: directory
       mode: 0750
+  - name: create zsh scripts directory
+    file:
+      path: ~/.zsh/scripts
+      state: directory
+      mode: 0750
 
   - name: populate zsh bin directory
     template:
@@ -33,6 +38,13 @@
       dest: ~/.zsh/source/{{ item | basename }}
     with_fileglob:
       - templates/zsh/source/*
+
+  - name: populate zsh scripts directory
+    template:
+      src: "{{ item }}"
+      dest: ~/.zsh/scripts/{{ item | basename }}
+    with_fileglob:
+      - templates/zsh/scripts/*
 
   - name: write zshrc
     template:
