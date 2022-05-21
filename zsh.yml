@@ -36,6 +36,7 @@
     template:
       src: "{{ item }}"
       dest: ~/.zsh/source/{{ item | basename }}
+      mode: 0640
     with_fileglob:
       - templates/zsh/source/*
 
@@ -43,6 +44,7 @@
     template:
       src: "{{ item }}"
       dest: ~/.zsh/scripts/{{ item | basename }}
+      mode: 0750
     with_fileglob:
       - templates/zsh/scripts/*
 
