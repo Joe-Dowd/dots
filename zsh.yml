@@ -1,7 +1,9 @@
 ---
 - hosts: localhost 
+  vars:
+    J_user: "{{ lookup('env','SUDO_USER') if lookup('env','USER') == 'root' else lookup('env','USER') }}"
   become: yes
-  become_user: joe # TODO : should be a var
+  become_user: "{{J_user}}"
   tasks:
   - name: create zsh directory
     file:
