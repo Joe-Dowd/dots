@@ -44,6 +44,7 @@ ansible-playbook user.yml          # for only user settings
 | `extract` | Extract most archives |
 | `far` | Find and replace |
 | `genpass` | Generate a password |
+| `genpass-bcrypt` | Generate a password wth bcrypt |
 | `home` | `clear` and `cd ~` |
 | `mkcd` | New directory and go there |
 | `nvm` | [nvm](https://github.com/nvm-sh/nvm) |

@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import getpass
+import bcrypt
+import sys
+
+password = str(sys.argv[1])
+hashed_password = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
+print(hashed_password.decode())
