@@ -15,3 +15,13 @@
       - tmux
       - git
       state: present
+
+  - name: Install steam packages
+    pacman:
+      name:
+      - lib32-mesa
+      - vulkan-radeon
+      - lib32-vulkan-radeon
+      - vulkan-icd-loader
+      - lib32-vulkan-icd-loader
+      state: present
